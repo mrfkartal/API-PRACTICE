@@ -75,6 +75,7 @@ public class Get01 {
         //'Time' nasil yazdirilir:
         System.out.println("Time:"+response.getTime());
 
+        //'Size' nasil yazilir.
         System.out.println("Size : "+response.headers().size());
 
     }
