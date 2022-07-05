@@ -21,8 +21,10 @@ public class Get01 {
 
         c) Test kodunun yazimi
 
-              i) Set the URL - URL'yi yazmak
+              i) Set the URL - URL'yi yazmak // ilk yapacagimiz
+
               ii)Set the Expected data(POT-PUT-PATCH)-beklenen datanin kullanilmasi
+
               iii)Type code to send request-Talep gondermek icin kod yazacagiz
               iv)Do Assertion-Gelen data ile beklenen data uyusuyor mu buna bakacagiz
  */
@@ -38,6 +40,8 @@ public class Get01 {
         And
             Status Line should be HTTP/1.1 200 OK
      */
+
+
 
     @Test
     public void get01(){
