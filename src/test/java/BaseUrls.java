@@ -8,7 +8,7 @@ public class BaseUrls {
        protected RequestSpecification spec;
 
 
-       //@Before annotation'i kullandigimiz methodlar her Test methodundan
+       //@Before annotation'i kullandigimiz methodlar her Test methodundan once calistirilir.
        @Before
        public void setup(){
 
