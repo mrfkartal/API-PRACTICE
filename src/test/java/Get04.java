@@ -1,7 +1,10 @@
+import io.restassured.http.ContentType;
 import io.restassured.response.*;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.CoreMatchers.hasItem;
+import static org.hamcrest.Matchers.hasSize;
 
 public class Get04 extends BaseUrls{
 
@@ -37,7 +40,20 @@ public class Get04 extends BaseUrls{
         //3.Step: Set the request and get response
        Response response= given().spec(spec).when().get("/{first}");
 
+        response.prettyPrint(); // yazdirmamimizi sebebi 200 adet varmi kontrol ettik.
+
+
        //4. Step: Do Assertion
+        response.
+                then().
+                assertThat().
+                statusCode(200).
+                contentType(ContentType.JSON).
+                body("id", hasSize(200),
+                        "title", hasItem("quis eius est sint explicabo"));//  basliklarin birinde bu yazi yaziyor mu test ediyrouz
+        //hasItem contain ile ayni icerip icermedigini test eder.
+
+
 
     }
 
