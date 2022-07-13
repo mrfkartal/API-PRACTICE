@@ -1,8 +1,10 @@
+package base_urls;
+
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
 
-public class BaseUrls {
+public class JsonplaceholderBaseUrls {
 
 
        protected RequestSpecification spec;
