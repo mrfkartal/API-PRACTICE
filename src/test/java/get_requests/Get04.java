@@ -10,7 +10,7 @@ import static org.hamcrest.CoreMatchers.hasItem;
 import static org.hamcrest.CoreMatchers.hasItems;
 import static org.hamcrest.Matchers.hasSize;
 
-public class Get04 extends JsonplaceholderBaseUrl {
+public class  Get04 extends JsonplaceholderBaseUrl {
 
 
     /*

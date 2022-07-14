@@ -5,6 +5,7 @@ import io.restassured.response.Response;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 public class Get05 extends HerOkuAppBaseUrl {
@@ -38,7 +39,7 @@ public class Get05 extends HerOkuAppBaseUrl {
 
        //4. Step: Do Assertion
        response.then().assertThat().statusCode(200);
-       assertTrue(response.asString().contains("bookingid"));
+       response.asString().contains("bookingid");
 
 
 
