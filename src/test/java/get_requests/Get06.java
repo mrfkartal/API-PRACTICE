@@ -46,7 +46,8 @@ public class Get06 extends HerOkuAppBaseUrl {
         //  response.prettyPrint();
 
         //4. Step: Do Assertion
-        //1. Yol
+
+        //1. Yol ----> kullanisli bir yol
         response.
                 then().
                 assertThat().
@@ -59,7 +60,7 @@ public class Get06 extends HerOkuAppBaseUrl {
                         "bookingdates.checkin",equalTo("2022-07-13"),
                         "bookingdates.checkout",equalTo("2022-07-26"));
 
-        //2. Yol: JsonPath Class kullanılır
+        //2. Yol: JsonPath Class kullanılır ** bayaga kullanislu bir yol
 
         JsonPath json = response.jsonPath();
         assertEquals("Snovid", json.getString("firstname"));
