@@ -57,7 +57,7 @@ public class Get11 extends GorestBaseUrl {
 
 
         //Bayan ve erkek sayısını karşılaştıralım
-        //1. Yol: Tüm cinisyetli çekip bayan sayısı ile karşılaştıralım.
+        //1. Yol: Tüm cinsıyetlerı çekip bayan sayısı ile karşılaştıralım.
         JsonPath json = response.jsonPath();
         List<String> genders = json.getList("data.gender");
         System.out.println(genders);
