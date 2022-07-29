@@ -43,12 +43,12 @@ public class Post01 extends JsonplaceholderBaseUrl {
         JsonPlaceHolderTestData expectedData = new JsonPlaceHolderTestData();
         Map<String, Object> expectedDataMap = expectedData.expectedDataWithAllKeys(55, "Tidy your room", false);
 
-        //3. Step: Send Post Request and get Response
+        //3. Step: Send Post Request and get Response ----  post yapiyourz. response talebinde bulun ve cevabida al.
         Response response = given().spec(spec).contentType(ContentType.JSON).body(expectedDataMap).when().post("/{first}");
         response.prettyPrint();
 
         //4. Step: Do Assertion
-        Map<String, Object> actualDataMap = response.as(HashMap.class);
+        Map<String, Object> actualDataMap = response.as(HashMap.class); // response tip[i gelen datayi mape ceviriyoruz
         assertEquals(expectedDataMap.get("userId"),actualDataMap.get("userId"));
         assertEquals(expectedDataMap.get("title"),actualDataMap.get("title"));
         assertEquals(expectedDataMap.get("completed"),actualDataMap.get("completed"));
