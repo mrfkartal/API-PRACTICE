@@ -1,5 +1,9 @@
 package pojos;
 
+
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class JsonPlaceHolderPojo {
 
 /*
@@ -57,4 +61,20 @@ this.completed = completed;
     public void setCompleted(Boolean completed) {
         this.completed = completed;
     }
+
+// 4) toString() methodumuzu oluşturuyoruz.
+//Neden toString yapiyoruz cunku 3.maddedeki 'userId,title,completed' leri okumamk icin bize yol sagliyor.
+
+    @Override
+    public String toString() {
+        return "JsonPlaceHolderPojo{" +
+                "userId=" + userId +
+                ", title='" + title + '\'' +
+                ", completed=" + completed +
+                '}';
+    }
+
+    //Farkli key-value ikililerin uyusmazligini @JsonIgnoreProperties(ignoreUnknown = true)
+    //anotation'ini Pojo Class'imizin basina yazarak cozebiliriz.
+
 }
