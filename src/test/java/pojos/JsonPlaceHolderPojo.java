@@ -19,13 +19,12 @@ public class JsonPlaceHolderPojo {
 
 
 //1) tum keyler icin private variable'lar olusturuyoruz.
-
 private Integer userId;
 private String title;
 private Boolean completed;
 
-//2)Tüm parametrelerle ve parametresiz constructor'larımızı oluşturuyoruz.
 
+//2)Tüm parametrelerle ve parametresiz constructor'larımızı oluşturuyoruz.
 public JsonPlaceHolderPojo(Integer userId, String title, Boolean completed) {
 this.userId = userId; // burdaki this ne ise yarar dersek; usteki userId, title ve completed ile
 this.title = title;   // karismamamasini saplamak icin koyduk.
@@ -37,7 +36,6 @@ this.completed = completed;
 
 // 3) Getters ve Setters'larımızı oluşturuyoruz.
  //BUNUN ADIN INCAPSULATION YANI KABIN ICINE KOYMUS GIBI.
-
     public Integer getUserId() {  // get userid'yi baska yerden okuyabilmek icindir.
         return userId;
     }
@@ -64,7 +62,6 @@ this.completed = completed;
 
 // 4) toString() methodumuzu oluşturuyoruz.
 //Neden toString yapiyoruz cunku 3.maddedeki 'userId,title,completed' leri okumamk icin bize yol sagliyor.
-
     @Override
     public String toString() {
         return "JsonPlaceHolderPojo{" +
