@@ -33,16 +33,16 @@ public class Post03Pojo extends JsonplaceholderBaseUrl {
      */
 
     @Test
-    public void post01(){
-        //1. Step: Set the Url
+    public void postPojo01(){
+        //1. Step: Set the Url  ===> URL'yi ayarlayın
         spec.pathParam("first","todos");
 
-        //2. Step: Set the expected data
+        //2. Step: Set the expected data ===> beklenen verileri ayarla
         JsonPlaceHolderPojo payload = new JsonPlaceHolderPojo(55,"Tidy your room",false);
         System.out.println("ExpectedData: "+payload);
 
 
-        //3. Step: Send Post Request and get the Response
+        //3. Step: Send Post Request and get the Response ===> 3. Adım: Gönderi İsteği Gönderin ve Yanıtı alın
         Response response = given().spec(spec).contentType(ContentType.JSON).body(payload).when().post("/{first}");
         response.prettyPrint();
 
