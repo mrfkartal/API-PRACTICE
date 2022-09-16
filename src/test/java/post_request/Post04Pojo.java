@@ -54,7 +54,7 @@ public class Post04Pojo extends HerOkuAppBaseUrl {
         BookingDatesPojo bookingDatesPojo = new BookingDatesPojo("2021-09-21","2021-12-21");
         BookingPojo bookingPojo = new BookingPojo("Ali", "Can", 999,true,bookingDatesPojo, "Breakfast with white tea" );
 
-        //3. Step: Send the Post request and get the response
+        //3. Step: Send the Post  request and get the response
         Response response = given().spec(spec).contentType(ContentType.JSON).body(bookingPojo).when().post("/{first}");
         response.prettyPrint();
 
@@ -76,4 +76,5 @@ public class Post04Pojo extends HerOkuAppBaseUrl {
         assertEquals(bookingDatesPojo.getCheckin(), actualPojo.getBooking().getBookingdates().getCheckin());
         assertEquals(bookingDatesPojo.getCheckout(), actualPojo.getBooking().getBookingdates().getCheckout());
     }
+    //onemli
 }
