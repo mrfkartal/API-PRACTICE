@@ -73,5 +73,5 @@ this.completed = completed;
 
     //Farkli key-value ikililerin uyusmazligini @JsonIgnoreProperties(ignoreUnknown = true)
     //anotation'ini Pojo Class'imizin basina yazarak cozebiliriz.
-
+//
 }
